@@ -1,3 +1,5 @@
+import java.util.Scanner; // import the scanner class
+
 public class Main {
 
    public static void main(String []args) {
@@ -8,7 +10,7 @@ public class Main {
       // Construct a Scanner object
       // note: System.in() is the computer's keyboard
       Scanner scan = new Scanner(System.in);
-
+      /* 
       // Take input with the Scanner methods
       System.out.println("Enter some text: ");
       String inputStr = scan.nextLine();
@@ -22,7 +24,7 @@ public class Main {
       System.out.println("You entered: " + inputStr);
       // Use values in an expression
       double sum = inputInt + inputDouble;
-
+      */
       //***STRING CLASS***
       // Original way of constructing a String object
       String message = new String("APCS is awesome!");
@@ -41,5 +43,19 @@ public class Main {
       System.out.println("12" + (4 + 3)); //127
       System.out.println(("12") + 4 + 3); // 1243
       System.out.println(12 + 4 + 3); // NOT concatenation, just addition
+
+      // *** STRING METHODS ***
+      // .length() returns number of characters
+      int messageLength = message.length();
+      System.out.println("Length: " + messageLength);
+      // .length()-1 represents final index
+      System.out.println("Final Index: " + (message.length()-1));
+
+      // Use index to access character(s)
+      // .substring(int, int) return a String from first index to second
+      // not including the char at the second int index
+      String firstWord = message.substring(0,3);
+      System.out.println(firstWord);
+
    }
 }
